@@ -1,0 +1,26 @@
+# Data Manipulation & Computation
+pandas==2.2.0
+numpy==1.26.3
+
+# Data Visualization
+matplotlib==3.8.2
+seaborn==0.13.2
+plotly==5.18.0
+
+# Machine Learning & Time Series
+scikit-learn==1.4.0
+statsmodels==0.14.1
+prophet==1.1.5
+xgboost==2.0.3
+
+# Dashboard
+streamlit==1.31.0
+
+# Database
+mysql-connector-python==8.3.0
+SQLAlchemy==2.0.25
+
+# Utilities & Testing
+jupyter==1.0.0
+pytest==8.0.0
+python-dotenv==1.0.1
