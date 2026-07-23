@@ -1,47 +1,55 @@
 """
-Reusable KPI Card Components for the Streamlit Dashboard.
-Renders enterprise-style metric cards with accent bars, deltas, and icons.
+KPI Card Component — Premium glassmorphic metric cards.
+Uses ONLY <div> elements (no <span>) because Streamlit's markdown
+sanitizer strips nested <span> tags in certain contexts.
 """
 
 import streamlit as st
 
+DEFAULT_ICONS = {
+    "blue": "💰", "green": "📈", "red": "📉", "amber": "⚡", "purple": "🎯",
+}
 
-def render_kpi_card(label: str, value: str, delta: str = None, delta_positive: bool = True, accent: str = "blue"):
-    """
-    Renders a single KPI metric card using custom HTML/CSS.
 
-    Args:
-        label: The metric label (e.g., 'Total Revenue').
-        value: The formatted metric value (e.g., '$1.2M').
-        delta: Optional delta string (e.g., '+12.4%').
-        delta_positive: If True, delta is green; otherwise red.
-        accent: Accent color class ('blue', 'green', 'red', 'amber', 'purple').
-    """
-    delta_class = "positive" if delta_positive else "negative"
-    delta_icon = "↑" if delta_positive else "↓"
+def render_kpi_card(
+    label: str,
+    value: str,
+    delta: str = None,
+    delta_positive: bool = True,
+    accent: str = "blue",
+    icon: str = None,
+    subtext: str = "vs previous period",
+):
+    """Renders a single glassmorphic KPI card using only div elements."""
+    display_icon = icon or DEFAULT_ICONS.get(accent, "📊")
+
     delta_html = ""
     if delta:
-        delta_html = f'<div class="kpi-delta {delta_class}">{delta_icon} {delta}</div>'
+        cls = "positive" if delta_positive else "negative"
+        arrow = "↑" if delta_positive else "↓"
+        delta_html = (
+            f'<div class="kpi-footer-row">'
+            f'<div class="kpi-badge {cls}">{arrow} {delta}</div>'
+            f'<div class="kpi-subtext">{subtext}</div>'
+            f'</div>'
+        )
 
-    card_html = f"""
-    <div class="kpi-card">
-        <div class="kpi-accent {accent}"></div>
-        <div class="kpi-label">{label}</div>
-        <div class="kpi-value">{value}</div>
-        {delta_html}
-    </div>
-    """
-    st.markdown(card_html, unsafe_allow_html=True)
+    html = (
+        f'<div class="kpi-card">'
+        f'<div class="kpi-accent {accent}"></div>'
+        f'<div class="kpi-header-row">'
+        f'<div class="kpi-label">{label}</div>'
+        f'<div class="kpi-icon-wrapper">{display_icon}</div>'
+        f'</div>'
+        f'<div class="kpi-value">{value}</div>'
+        f'{delta_html}'
+        f'</div>'
+    )
+    st.markdown(html, unsafe_allow_html=True)
 
 
 def render_kpi_row(metrics: list):
-    """
-    Renders a row of KPI cards.
-
-    Args:
-        metrics: List of dicts, each with keys: label, value, delta (optional),
-                 delta_positive (optional, default True), accent (optional, default 'blue').
-    """
+    """Renders a responsive row of KPI cards."""
     cols = st.columns(len(metrics))
     for col, m in zip(cols, metrics):
         with col:
@@ -51,4 +59,6 @@ def render_kpi_row(metrics: list):
                 delta=m.get("delta"),
                 delta_positive=m.get("delta_positive", True),
                 accent=m.get("accent", "blue"),
+                icon=m.get("icon"),
+                subtext=m.get("subtext", "vs prev. period"),
             )

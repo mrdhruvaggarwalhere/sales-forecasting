@@ -1,6 +1,6 @@
 """
-Sidebar Component for the Streamlit Dashboard.
-Handles navigation, filters (date, state, store, category, product), and branding.
+Sidebar Component — Navigation and filters for the dashboard.
+Adapted for the aggregated daily sales dataset (no store/item/category columns).
 """
 
 import streamlit as st
@@ -8,47 +8,33 @@ import pandas as pd
 
 
 def render_sidebar(df: pd.DataFrame = None) -> dict:
-    """
-    Renders the sidebar with navigation and interactive filters.
-
-    Args:
-        df: The loaded dataframe used to populate filter options dynamically.
-
-    Returns:
-        dict: A dictionary containing the selected page and all active filter values.
-    """
+    """Renders the sidebar with navigation and year filter."""
     with st.sidebar:
-        # ── Branding ──────────────────────────────────
+        # ── Branding ──────────────────────────────────────────
         st.markdown(
-            """
-            <div style="padding: 0.5rem 0 1.5rem 0;">
-                <div style="font-size: 1.15rem; font-weight: 700; color: #F0F2F6; letter-spacing: -0.02em;">
-                    📊 Revenue Forecast
-                </div>
-                <div style="font-size: 0.72rem; color: #6B7280; margin-top: 0.15rem;">
-                    Sales Intelligence Platform
-                </div>
-            </div>
-            """,
+'<div style="padding:0.5rem 0 1.2rem 0;display:flex;align-items:center;gap:0.75rem;">'
+'<div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#3B82F6 0%,#6366F1 100%);display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:0 0 15px rgba(59,130,246,0.4);">📈</div>'
+'<div><div style="font-size:1.1rem;font-weight:800;color:#F8FAFC;letter-spacing:-0.02em;line-height:1.2;">SalesPulse</div>'
+'<div style="font-size:0.72rem;font-weight:600;color:#3B82F6;letter-spacing:0.05em;text-transform:uppercase;">Enterprise Analytics</div></div></div>',
             unsafe_allow_html=True,
         )
         st.markdown('<hr class="custom-divider">', unsafe_allow_html=True)
 
-        # ── Navigation ───────────────────────────────
+        # ── Navigation ────────────────────────────────────────
         st.markdown(
-            '<div style="font-size:0.7rem; font-weight:600; color:#6B7280; '
-            'text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Navigation</div>',
+            '<div style="font-size:0.72rem;font-weight:700;color:#64748B;'
+            'text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;">Navigation</div>',
             unsafe_allow_html=True,
         )
 
         pages = {
-            "🏠  Home": "Home",
-            "📈  Sales Analysis": "Sales Analysis",
-            "🔮  Forecast": "Forecast",
-            "📦  Product Analysis": "Product Analysis",
-            "💰  Revenue Analysis": "Revenue Analysis",
-            "⚙️  Model Comparison": "Model Comparison",
-            "📄  Reports": "Reports",
+            "🏠  Overview": "Home",
+            "📊  Sales Analysis": "Sales Analysis",
+            "🔮  Revenue Forecast": "Forecast",
+            "📦  Product Breakdown": "Product Analysis",
+            "💰  Revenue Deep-Dive": "Revenue Analysis",
+            "⚡  Model Comparison": "Model Comparison",
+            "📄  Executive Reports": "Reports",
         }
 
         selected_page = st.radio(
@@ -60,82 +46,32 @@ def render_sidebar(df: pd.DataFrame = None) -> dict:
 
         st.markdown('<hr class="custom-divider">', unsafe_allow_html=True)
 
-        # ── Filters ───────────────────────────────────
+        # ── Filters ───────────────────────────────────────────
         st.markdown(
-            '<div style="font-size:0.7rem; font-weight:600; color:#6B7280; '
-            'text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Filters</div>',
+            '<div style="font-size:0.72rem;font-weight:700;color:#64748B;'
+            'text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;">Global Filters</div>',
             unsafe_allow_html=True,
         )
 
         filters = {}
 
         if df is not None and not df.empty:
-            # Date Range
-            if "date" in df.columns:
-                min_date = df["date"].min().date()
-                max_date = df["date"].max().date()
-                date_range = st.date_input(
-                    "Date Range",
-                    value=(min_date, max_date),
-                    min_value=min_date,
-                    max_value=max_date,
-                )
-                filters["date_range"] = date_range
-
-            # State
-            if "state_id" in df.columns:
-                states = ["All"] + sorted(df["state_id"].unique().tolist())
-                filters["state"] = st.selectbox("State", states)
-
-            # Store
-            if "store_id" in df.columns:
-                stores = ["All"] + sorted(df["store_id"].unique().tolist())
-                filters["store"] = st.selectbox("Store", stores)
-
-            # Category
-            if "cat_id" in df.columns:
-                cats = ["All"] + sorted(df["cat_id"].unique().tolist())
-                filters["category"] = st.selectbox("Category", cats)
-
-            # Department
-            if "dept_id" in df.columns:
-                depts = ["All"] + sorted(df["dept_id"].unique().tolist())
-                filters["department"] = st.selectbox("Department", depts)
+            # Year filter
+            if "year" in df.columns:
+                years = ["All Years"] + sorted(df["year"].unique().tolist())
+                selected_year = st.selectbox("Year", years)
+                filters["year"] = None if selected_year == "All Years" else selected_year
 
         st.markdown('<hr class="custom-divider">', unsafe_allow_html=True)
+
+        # ── System Status ─────────────────────────────────────
         st.markdown(
-            '<div style="font-size:0.68rem; color:#4B5563; text-align:center; padding:0.5rem 0;">'
-            'Built with Streamlit &bull; v1.0</div>',
+'<div style="padding:0.5rem;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);text-align:center;">'
+'<div style="font-size:0.72rem;font-weight:600;color:#94A3B8;">System Status</div>'
+'<div style="display:flex;align-items:center;justify-content:center;gap:0.4rem;font-size:0.7rem;color:#10B981;margin-top:0.2rem;">'
+'<span style="width:6px;height:6px;border-radius:50%;background:#10B981;display:inline-block;"></span>'
+'Pipeline Ready</div></div>',
             unsafe_allow_html=True,
         )
 
     return {"page": active_page, "filters": filters}
-
-
-def apply_filters(df: pd.DataFrame, filters: dict) -> pd.DataFrame:
-    """
-    Applies the sidebar filter selections to the dataframe.
-
-    Args:
-        df: The original dataframe.
-        filters: Dictionary of filter values from render_sidebar().
-
-    Returns:
-        pd.DataFrame: Filtered dataframe.
-    """
-    filtered = df.copy()
-
-    # Date range
-    date_range = filters.get("date_range")
-    if date_range and len(date_range) == 2:
-        start, end = pd.Timestamp(date_range[0]), pd.Timestamp(date_range[1])
-        filtered = filtered[(filtered["date"] >= start) & (filtered["date"] <= end)]
-
-    # Categorical filters
-    for col_key, col_name in [("state", "state_id"), ("store", "store_id"),
-                               ("category", "cat_id"), ("department", "dept_id")]:
-        val = filters.get(col_key)
-        if val and val != "All" and col_name in filtered.columns:
-            filtered = filtered[filtered[col_name] == val]
-
-    return filtered
