@@ -38,7 +38,7 @@ if css_path.is_file():
 # ── Imports ───────────────────────────────────────────────────────────────────
 from components.sidebar import render_sidebar
 from views import home, sales_analysis, forecast, product_analysis
-from views import revenue_analysis, model_comparison, reports
+from views import revenue_analysis, model_comparison, reports, sustainability
 
 
 # ── Data Loaders (cached) ────────────────────────────────────────────────────
@@ -206,6 +206,9 @@ def main():
 
     elif active_page == "Reports":
         reports.render(filtered_df, eval_metrics, plot_data, forecast_csv)
+
+    elif active_page == "Sustainability":
+        sustainability.render(filtered_df, product_forecasts)
 
 
 if __name__ == "__main__":

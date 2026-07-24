@@ -35,6 +35,7 @@ def render_sidebar(df: pd.DataFrame = None) -> dict:
             "💰  Revenue Deep-Dive": "Revenue Analysis",
             "⚡  Model Comparison": "Model Comparison",
             "📄  Executive Reports": "Reports",
+            "🌱  Sustainability": "Sustainability",
         }
 
         selected_page = st.radio(

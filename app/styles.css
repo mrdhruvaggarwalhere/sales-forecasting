@@ -82,21 +82,32 @@ html, body, [class*="css"] {
     to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes pulseGlow {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
-}
-
 .main .block-container {
     animation: fadeIn 0.4s var(--transition-smooth);
     padding: 2.2rem 3rem 4rem 3rem !important;
     max-width: 1440px !important;
 }
 
-/* ---------- Streamlit Header & Branding Clean up ---------- */
-#MainMenu, footer, header[data-testid="stHeader"] {
+/* ---------- Header & Floating Top-Left Controls ---------- */
+#MainMenu, footer {
     visibility: hidden;
     height: 0;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    z-index: 99999 !important;
+}
+
+/* Top-left sidebar expand/collapse button */
+[data-testid="stSidebarCollapsedControl"] {
+    visibility: visible !important;
+    color: var(--text-primary) !important;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: var(--radius-sm) !important;
+    margin: 8px 0 0 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
 }
 
 /* ---------- Sidebar Styling ---------- */
@@ -108,12 +119,36 @@ section[data-testid="stSidebar"] {
 }
 
 section[data-testid="stSidebar"] .block-container {
-    padding: 1.8rem 1.4rem 2rem 1.4rem !important;
+    padding: 1.8rem 1.2rem 2rem 1.2rem !important;
 }
 
-/* Navigation Radio Items */
+/* Hide Radio Buttons Dots (Strictly remove radio circles across all Streamlit versions) */
+div[data-testid="stSidebar"] div[role="radiogroup"] label > div:not([data-testid="stMarkdownContainer"]),
+div[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child,
+div[data-testid="stSidebar"] div[role="radiogroup"] label input,
+div[data-testid="stSidebar"] div[role="radiogroup"] label svg,
+div[data-testid="stSidebar"] div[role="radiogroup"] label div[class*="st-b"],
+div[data-testid="stSidebar"] div[role="radiogroup"] label div[class*="st-c"],
+div[data-testid="stSidebar"] div[role="radiogroup"] label div[class*="st-d"],
+div[data-testid="stSidebar"] div[role="radiogroup"] label div[class*="st-e"] {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+div[data-testid="stSidebar"] div[role="radiogroup"] label div[data-testid="stMarkdownContainer"] {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Navigation Radio Items (Pill Style Tabs) */
 div[data-testid="stSidebar"] div[role="radiogroup"] {
-    gap: 6px;
+    gap: 4px;
 }
 
 div[data-testid="stSidebar"] div[role="radiogroup"] label {
@@ -123,13 +158,16 @@ div[data-testid="stSidebar"] div[role="radiogroup"] label {
     color: var(--text-secondary) !important;
     font-weight: 500 !important;
     font-size: 0.88rem !important;
-    transition: var(--transition-normal) !important;
+    transition: var(--transition-fast) !important;
     border: 1px solid transparent !important;
     cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
 }
 
 div[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
-    background: rgba(255, 255, 255, 0.04) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     color: var(--text-primary) !important;
     transform: translateX(3px);
 }
@@ -137,18 +175,15 @@ div[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
 div[data-testid="stSidebar"] div[role="radiogroup"] label[data-checked="true"] {
     background: var(--gradient-primary) !important;
     color: #FFFFFF !important;
-    font-weight: 600 !important;
-    box-shadow: var(--shadow-glow-blue) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
-div[data-testid="stSidebar"] div[role="radiogroup"] label span[data-testid="stMarkdownContainer"] p {
+div[data-testid="stSidebar"] div[role="radiogroup"] label p,
+div[data-testid="stSidebar"] div[role="radiogroup"] label span {
     color: inherit !important;
-}
-
-/* Hide Radio Circles */
-div[data-testid="stSidebar"] div[role="radiogroup"] label div[first-child="true"] {
-    display: none !important;
+    margin: 0 !important;
 }
 
 /* ---------- Premium KPI Cards ---------- */
@@ -287,25 +322,9 @@ div[data-testid="stSidebar"] div[role="radiogroup"] label div[first-child="true"
     gap: 0.6rem;
 }
 
-/* ---------- Chart Container Cards ---------- */
-.chart-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    padding: 1.4rem;
-    margin-bottom: 1.4rem;
-    box-shadow: var(--shadow-card);
-    transition: var(--transition-normal);
-}
-
-.chart-card:hover {
-    border-color: var(--border-medium);
-}
-
 /* ---------- Streamlit Widgets Custom Styling ---------- */
 
-/* Selectboxes, MultiSelects & Inputs */
+/* Selectboxes & Inputs */
 div[data-testid="stSelectbox"] > label,
 div[data-testid="stMultiSelect"] > label,
 div[data-testid="stDateInput"] > label,
@@ -331,20 +350,7 @@ div[data-baseweb="select"] > div:hover {
     border-color: var(--border-medium) !important;
 }
 
-div[data-baseweb="select"] > div[aria-expanded="true"] {
-    border-color: var(--accent-blue) !important;
-    box-shadow: 0 0 0 2px var(--accent-blue-glow) !important;
-}
-
-/* Date Input Styling */
-div[data-testid="stDateInput"] input {
-    background-color: var(--bg-input) !important;
-    border: 1px solid var(--border-subtle) !important;
-    border-radius: var(--radius-md) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Tabs Styling */
+/* Pill Tabs */
 .stTabs [data-baseweb="tab-list"] {
     gap: 8px;
     background: transparent;
@@ -362,11 +368,6 @@ div[data-testid="stDateInput"] input {
     font-size: 0.88rem;
     border: 1px solid transparent;
     transition: var(--transition-fast);
-}
-
-.stTabs [data-baseweb="tab"]:hover {
-    background: rgba(255, 255, 255, 0.04);
-    color: var(--text-primary);
 }
 
 .stTabs [aria-selected="true"] {
@@ -422,8 +423,4 @@ div[data-testid="stDataFrame"] {
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.25);
 }
