@@ -37,10 +37,6 @@ env/
 .env
 .env.local
 
-# Data folders (Crucial to keep large Kaggle datasets out of Git)
-*.csv
-*.xlsx
-*.parquet
 
 # IDEs and Editors
 .vscode/
