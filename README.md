@@ -161,7 +161,7 @@ The forecasting models are primarily evaluated using the following metrics to en
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/mrdhruvaggarwal/sales-forecasting/issues).
 
-- **Your Name** - *Initial work* - [@YourGithub](https://github.com/mrdhruvaggarwalhere)
+- **Your Name** - *Initial work* - [Dhruv Aggarwal](https://github.com/mrdhruvaggarwalhere)
 - [LinkedIn Profile](https://linkedin.com/in/mrdhruvaggarwal)
 
 ---
