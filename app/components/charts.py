@@ -61,7 +61,15 @@ def apply_theme(fig: go.Figure) -> go.Figure:
 
 def line_chart(df: pd.DataFrame, x: str, y: str, title: str, color: str = None) -> go.Figure:
     """Creates a styled line chart with smooth curves."""
-    fig = px.line(df, x=x, y=y, title=title, color=color, color_discrete_sequence=PALETTE)
+    fig = px.line(
+        df,
+        x=x,
+        y=y,
+        title=title,
+        color=color,
+        color_discrete_sequence=PALETTE,
+        render_mode="svg",
+    )
     fig.update_traces(line=dict(width=2.5))
     return apply_theme(fig)
 
@@ -116,7 +124,16 @@ def histogram_chart(df: pd.DataFrame, x: str, title: str, nbins: int = 40) -> go
 
 def scatter_chart(df: pd.DataFrame, x: str, y: str, title: str, color: str = None) -> go.Figure:
     """Creates a styled scatter plot."""
-    fig = px.scatter(df, x=x, y=y, title=title, color=color, opacity=0.75, color_discrete_sequence=PALETTE)
+    fig = px.scatter(
+        df,
+        x=x,
+        y=y,
+        title=title,
+        color=color,
+        opacity=0.75,
+        color_discrete_sequence=PALETTE,
+        render_mode="svg",
+    )
     fig.update_traces(marker=dict(size=7))
     return apply_theme(fig)
 

@@ -104,6 +104,19 @@ def render(daily_df: pd.DataFrame = None, product_forecasts: Dict = None):
             st.markdown('<div class="section-header">📈 Cumulative Carbon Reduction</div>', unsafe_allow_html=True)
             timeline = sustainability_data.get("inventory_timeline", {})
             fig1 = monthly_carbon_trend_chart(timeline)
+            fig1.update_layout(
+                title=None,
+                height=340,
+                margin=dict(l=35, r=15, t=10, b=80),
+                legend=dict(
+                    orientation="h",
+                    yanchor="top",
+                    y=-0.24,
+                    xanchor="center",
+                    x=0.5,
+                    font=dict(size=10, color="#CBD5E1"),
+                ),
+            )
             st.plotly_chart(fig1, use_container_width=True, config=PLOTLY_CONFIG)
 
         with col2:

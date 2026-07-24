@@ -1,0 +1,374 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\setstretch{1.25}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\definecolor{PrimaryBlue}{HTML}{1D4ED8}
+\definecolor{SoftBlue}{HTML}{EFF6FF}
+\definecolor{SoftGreen}{HTML}{ECFDF5}
+\definecolor{SoftAmber}{HTML}{FFFBEB}
+\definecolor{SoftGray}{HTML}{F8FAFC}
+\definecolor{TextGray}{HTML}{334155}
+\definecolor{AccentGreen}{HTML}{059669}
+\definecolor{AccentRed}{HTML}{DC2626}
+\definecolor{AccentOrange}{HTML}{D97706}
+
+\titleformat{\section}{\Large\bfseries\color{PrimaryBlue}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{TextGray}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{TextGray}}{\thesubsubsection}{0.6em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Sales Revenue Forecasting System}
+\rhead{\thepage}
+\cfoot{}
+
+\newcommand{\highlightbox}[3]{
+\begin{tcolorbox}[
+    enhanced,
+    colback=#1,
+    colframe=#2,
+    boxrule=0.8pt,
+    arc=3pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt
+]
+\textbf{#3}
+\end{tcolorbox}
+}
+
+\newcommand{\keymetric}[2]{
+\begin{tcolorbox}[
+    enhanced,
+    colback=SoftGray,
+    colframe=PrimaryBlue,
+    boxrule=0.8pt,
+    arc=4pt,
+    width=\linewidth
+]
+\textbf{#1}\\
+\Large\textbf{#2}
+\end{tcolorbox}
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+
+{\Large\bfseries College Project Report\par}
+\vspace{1.5cm}
+
+{\huge\bfseries Sales Revenue Forecasting System\par}
+\vspace{0.4cm}
+{\Large\bfseries with Sustainability Analytics\par}
+\vspace{1.5cm}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=SoftBlue,
+    colframe=PrimaryBlue,
+    width=0.88\textwidth,
+    boxrule=1pt,
+    arc=4pt
+]
+\centering
+\textbf{Project Domain:} Machine Learning, Time-Series Forecasting, Retail Analytics, and Green Supply Chain Optimization
+\end{tcolorbox}
+
+\vspace{1.2cm}
+
+\begin{tabular}{>{\bfseries}p{5cm} p{7cm}}
+Student Name: & Your Name \\
+Roll Number: & Your Roll Number \\
+Course: & Your Course Name \\
+Department: & Your Department \\
+Institution: & Your College Name \\
+Guide: & Guide Name \\
+Academic Year: & 2025--2026 \\
+\end{tabular}
+
+\vfill
+{\large \today\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section*{Title}
+\addcontentsline{toc}{section}{Title}
+Sales Revenue Forecasting System with Sustainability Analytics
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+This project presents an end-to-end sales revenue forecasting system developed in Python using the M5 retail forecasting dataset. The system combines data preprocessing, feature engineering, model training, evaluation, and interactive visualization in a Streamlit dashboard. Multiple models, including Linear Regression, Random Forest, XGBoost, ARIMA, and SARIMA, are trained and compared for daily sales prediction. In addition to forecasting, the project includes a sustainability module that simulates inventory reorder events, shipment consolidation, carbon emission reduction, and logistics cost savings. The resulting platform supports both revenue planning and environmentally conscious operational decisions. The project demonstrates how machine learning can be applied not only to improve forecast accuracy but also to create measurable business and sustainability value.
+\newpage
+
+\section{Introduction}
+Accurate retail forecasting is essential for inventory planning, pricing decisions, logistics scheduling, and revenue optimization. In retail environments, demand changes frequently because of calendar effects, seasonality, product popularity shifts, and pricing variation. These characteristics make sales prediction a challenging but important problem in business analytics.
+
+This project addresses the problem by building a forecasting pipeline that transforms raw M5 retail data into a practical decision-support system. The system is not limited to prediction alone; it also includes a dashboard for analysis and a sustainability layer that estimates how forecast-driven inventory decisions affect fuel usage, delivery trips, carbon emissions, and logistics cost.
+
+\subsection{Review with Comparative Table}
+Sales forecasting has traditionally relied on statistical time-series methods, but recent work has increasingly used machine learning for structured tabular forecasting. Classical models are often easier to interpret, while tree-based ensemble methods can learn nonlinear feature interactions from lagged and rolling variables. In practice, model choice depends on the dataset structure, seasonality, and the need for explainability.
+
+\begin{table}[H]
+\centering
+\caption{Comparative Review of Forecasting Approaches}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{2.6cm} p{3.1cm} p{4.3cm} p{4.3cm}}
+\toprule
+\textbf{Model} & \textbf{Suitability} & \textbf{Strengths} & \textbf{Weaknesses} \\
+\midrule
+Linear Regression & Baseline model for engineered features & Simple, fast, interpretable, good reference point & Cannot capture complex nonlinear demand patterns well \\
+Random Forest & Structured retail data with lag and rolling features & Robust to noise, handles nonlinearities, works well on tabular data & Less interpretable, limited extrapolation ability \\
+XGBoost & High-performance retail forecasting & Excellent accuracy on engineered features, strong interaction learning & Requires tuning and feature engineering, less transparent \\
+ARIMA & Univariate time-series forecasting & Strong mathematical foundation, useful for stationary series & Sensitive to stationarity assumptions, limited feature support \\
+SARIMA & Seasonal retail time series & Captures trend and seasonality, suitable for periodic demand & Parameter selection can be difficult, heavier to tune \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Research Gap / Challenges Found}
+Although forecasting methods are well studied, real retail applications still face several challenges:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Seasonality and holidays:} retail demand changes around weekends, festivals, and promotional periods.
+    \item \textbf{Non-stationarity:} time-series behavior can drift over time, which reduces the effectiveness of rigid assumptions.
+    \item \textbf{Missing values and noisy records:} real datasets often contain incomplete or inconsistent observations.
+    \item \textbf{Data leakage risk:} lag and rolling features must be built carefully using only historical data.
+    \item \textbf{Balancing accuracy and interpretability:} high-accuracy models are not always easy to explain.
+    \item \textbf{Limited sustainability linkage:} many forecasting systems stop at prediction and do not translate forecasts into logistics or emissions outcomes.
+\end{itemize}
+
+This project closes that gap by combining forecasting, visual analytics, and sustainability simulation in one integrated system.
+
+\subsection{Objectives}
+The main objectives of the project are:
+\begin{enumerate}[leftmargin=*]
+    \item To develop a retail forecasting pipeline that processes raw data, engineers predictive features, and trains multiple forecasting models.
+    \item To compare statistical and machine learning models using standard evaluation metrics and select the best-performing approach.
+    \item To extend the forecasting system with sustainability analytics that estimate shipment consolidation, CO$_2$ savings, and logistics cost reduction.
+\end{enumerate}
+
+\section{System Model or Architecture}
+The project follows a modular architecture with clearly separated stages.
+
+\subsection{Data Ingestion}
+The raw dataset consists of three major inputs:
+\begin{itemize}[leftmargin=*]
+    \item \texttt{sales\_train\_evaluation.csv} for historical item-wise sales,
+    \item \texttt{calendar.csv} for dates, holidays, and event information,
+    \item \texttt{sell\_prices.csv} for product-level pricing.
+\end{itemize}
+
+\subsection{Preprocessing}
+The sales data is converted from wide format to long format. It is then merged with calendar and price data. The preprocessing module removes missing sell-price rows, computes revenue, drops duplicates, and saves the cleaned dataset for feature engineering.
+
+\subsection{Feature Engineering}
+The system generates predictive variables such as:
+\begin{itemize}[leftmargin=*]
+    \item calendar variables: year, quarter, month, day of week,
+    \item lag features: previous day, previous week, and previous month values,
+    \item rolling mean and rolling standard deviation features,
+    \item growth-rate features,
+    \item price-change features,
+    \item encoded categorical identifiers.
+\end{itemize}
+
+\subsection{Model Training and Evaluation}
+The engineered dataset is split chronologically into training and testing sets. This ensures realistic evaluation and avoids future leakage. The system then trains multiple models and compares them using MAE, RMSE, MAPE, and $R^2$.
+
+\subsection{Dashboard Layer}
+The Streamlit application provides interactive pages for:
+\begin{itemize}[leftmargin=*]
+    \item executive overview,
+    \item sales analysis,
+    \item forecast comparison,
+    \item product analysis,
+    \item revenue analysis,
+    \item model comparison,
+    \item sustainability analysis.
+\end{itemize}
+
+\subsection{Sustainability Module}
+The sustainability module takes product forecasts as input, simulates inventory consumption, detects reorder points, groups nearby orders into consolidated shipments, and estimates the environmental impact of the optimized plan.
+
+\highlightbox{SoftBlue}{PrimaryBlue}{Architecture Flow: Raw Retail Data $\rightarrow$ Preprocessing $\rightarrow$ Feature Engineering $\rightarrow$ Model Training $\rightarrow$ Forecast Evaluation $\rightarrow$ Dashboard Visualization $\rightarrow$ Sustainability Analysis}
+
+\section{Mathematical Derivation of the Objective and Algorithms}
+The goal of the forecasting module is to predict future sales revenue with minimum error.
+
+\subsection{Revenue Equation}
+For a product at time $t$, revenue is defined as:
+\[
+R_t = S_t \times P_t
+\]
+where $R_t$ is revenue, $S_t$ is sales quantity, and $P_t$ is selling price.
+
+\subsection{Lag Features}
+Lag features capture historical demand:
+\[
+L_t^{(k)} = y_{t-k}
+\]
+where $L_t^{(k)}$ is the lagged value at lag $k$ and $y_t$ is the target variable.
+
+\subsection{Rolling Mean}
+The rolling mean over a window of size $w$ is:
+\[
+\mu_t^{(w)} = \frac{1}{w}\sum_{i=0}^{w-1} y_{t-i}
+\]
+
+\subsection{Rolling Standard Deviation}
+The rolling standard deviation is:
+\[
+\sigma_t^{(w)} = \sqrt{\frac{1}{w}\sum_{i=0}^{w-1}\left(y_{t-i} - \mu_t^{(w)}\right)^2}
+\]
+
+\subsection{Growth Rate}
+The daily growth rate can be written as:
+\[
+g_t = \frac{y_t - y_{t-1}}{y_{t-1}}
+\]
+Similar expressions are used for weekly and monthly growth features by replacing $t-1$ with $t-7$ and $t-28$.
+
+\subsection{Prediction Objective}
+The model learns a function $f(\cdot)$ such that:
+\[
+\hat{y}_t = f(X_t)
+\]
+where $X_t$ is the feature vector and $\hat{y}_t$ is the predicted value. The objective is to minimize prediction error, typically using mean squared error:
+\[
+\mathcal{L} = \frac{1}{n}\sum_{t=1}^{n}(y_t - \hat{y}_t)^2
+\]
+
+\subsection{Evaluation Metrics}
+\textbf{Mean Absolute Error (MAE):}
+\[
+MAE = \frac{1}{n}\sum_{t=1}^{n}|y_t - \hat{y}_t|
+\]
+
+\textbf{Root Mean Squared Error (RMSE):}
+\[
+RMSE = \sqrt{\frac{1}{n}\sum_{t=1}^{n}(y_t - \hat{y}_t)^2}
+\]
+
+\textbf{Mean Absolute Percentage Error (MAPE):}
+\[
+MAPE = \frac{100}{n}\sum_{t=1}^{n}\left|\frac{y_t - \hat{y}_t}{y_t}\right|
+\]
+
+\subsection{Sustainability Formulation}
+Let $T_n$ be the number of naive shipment trips and $T_o$ be the optimized number of trips after consolidation.
+\[
+T_s = T_n - T_o
+\]
+where $T_s$ is the number of trips saved.
+
+If $F_n$ and $F_o$ denote fuel use before and after optimization, then:
+\[
+F_s = F_n - F_o
+\]
+Similarly, if $C_n$ and $C_o$ denote carbon emissions, and $K_n$ and $K_o$ denote logistics costs, then:
+\[
+C_s = C_n - C_o,\qquad K_s = K_n - K_o
+\]
+
+\section{Results and Discussion}
+The model evaluation results from the saved outputs show a clear difference between baseline and ensemble methods.
+
+\begin{table}[H]
+\centering
+\caption{Model Performance on the Test Set}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{MAE} & \textbf{RMSE} & \textbf{R$^2$} \\
+\midrule
+Linear Regression & 401.83 & 1879.16 & -13.8140 \\
+Random Forest & 16.72 & 21.50 & 0.9981 \\
+XGBoost & 12.12 & 15.33 & 0.9990 \\
+ARIMA & 348.18 & 445.57 & 0.1671 \\
+SARIMA & 109.46 & 139.24 & 0.9187 \\
+Prophet & 490.90 & 511.85 & -0.0991 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\highlightbox{SoftGreen}{AccentGreen}{Best Forecasting Result: XGBoost achieved the lowest RMSE of 15.33, the lowest MAE of 12.12, and the highest R$^2$ of 0.9990 on the official training evaluation output.}
+
+\highlightbox{SoftAmber}{AccentOrange}{Strong Baseline: Random Forest also performed very well with RMSE 21.50 and R$^2$ 0.9981, showing that engineered lag and rolling features are highly effective for this dataset.}
+
+The results indicate that tree-based ensemble models outperform the classical linear baseline on this feature set. Linear Regression and Prophet produce weak performance because the retail demand pattern is nonlinear and influenced by multiple interacting temporal variables. ARIMA and SARIMA perform better than the linear baseline, but they still lag behind XGBoost and Random Forest because the dataset includes rich engineered features that are better exploited by machine learning methods.
+
+The sustainability module also produced measurable improvements. The saved sustainability output reports:
+\begin{itemize}[leftmargin=*]
+    \item naive shipments: 31 trips,
+    \item optimized shipments: 13 trips,
+    \item trips reduced: 18,
+    \item fuel saved: 1890.0 litres,
+    \item CO$_2$ saved: 5065.2 kg,
+    \item logistics cost saved: \$9706.5,
+    \item sustainability score: 80/100,
+    \item optimized order percentage: 58.1\%.
+\end{itemize}
+
+\keymetric{Sustainability Highlight}{18 trips removed and 5065.2 kg of CO$_2$ avoided}
+
+This shows that the forecasting system is not only useful for prediction but also for operational optimization. By consolidating reorder events into fewer deliveries, the system reduces transportation overhead while maintaining supply continuity. The recommendation engine further translates these savings into actionable statements for business decision-making.
+
+From a discussion perspective, the strongest technical insight is that forecast quality depends heavily on feature design. The lag, rolling, and trend features allow the models to capture demand history effectively. The sustainability layer also demonstrates that predicted demand can be linked directly to inventory policy and environmental impact, which makes the project more practical and industry-relevant.
+
+\section{Conclusion}
+This project successfully developed a complete sales revenue forecasting system with dashboard visualization and sustainability analysis. The pipeline integrates preprocessing, feature engineering, model training, performance comparison, and shipment optimization into one coherent platform. The saved results show that XGBoost and Random Forest provide strong predictive performance, while the sustainability module meaningfully reduces trips, fuel use, emissions, and cost.
+
+The project addresses major retail forecasting challenges such as seasonality, non-stationarity, and data leakage. It also extends the forecasting problem beyond accuracy by connecting predictions to environmentally responsible logistics decisions. In future work, the system can be improved using hyperparameter tuning, deep learning architectures, real-time data pipelines, and cloud deployment.
+
+\section{References}
+\begin{enumerate}[leftmargin=*]
+    \item Kaggle, M5 Forecasting Accuracy Competition. Available at: \url{https://www.kaggle.com/c/m5-forecasting-accuracy}
+    \item Streamlit Documentation. Available at: \url{https://docs.streamlit.io/}
+    \item pandas Documentation. Available at: \url{https://pandas.pydata.org/docs/}
+    \item NumPy Documentation. Available at: \url{https://numpy.org/doc/}
+    \item scikit-learn Documentation. Available at: \url{https://scikit-learn.org/stable/}
+    \item XGBoost Documentation. Available at: \url{https://xgboost.readthedocs.io/}
+    \item Statsmodels Documentation. Available at: \url{https://www.statsmodels.org/}
+    \item Hyndman, R. J. and Athanasopoulos, G., \textit{Forecasting: Principles and Practice}, OTexts.
+    \item Box, G. E. P., Jenkins, G. M., Reinsel, G. C., and Ljung, G. M., \textit{Time Series Analysis: Forecasting and Control}, Wiley.
+\end{enumerate}
+
+\end{document}

@@ -1862,11 +1862,11 @@
       "type": "advance",
       "priority": "high",
       "title": "Advance Orders for 3 Critical Products",
-      "message": "Products FOODS_3_090, FOODS_3_252, FOODS_3_586 hit critically low inventory levels (below 12% of capacity). Consider advancing future orders by 1-2 days to maintain safety stock and prevent stockouts while keeping shipments consolidated.",
+      "message": "Products FOODS_3_252, FOODS_3_586, FOODS_3_090 hit critically low inventory levels (below 12% of capacity). Consider advancing future orders by 1-2 days to maintain safety stock and prevent stockouts while keeping shipments consolidated.",
       "products": [
-        "FOODS_3_090",
         "FOODS_3_252",
-        "FOODS_3_586"
+        "FOODS_3_586",
+        "FOODS_3_090"
       ],
       "estimated_savings": "Reduced stockout risk + better consolidation windows",
       "icon": "\u26a1"

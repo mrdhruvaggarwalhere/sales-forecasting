@@ -1,1 +1,38 @@
-{"ARIMA": {"MAE": 2524.97, "RMSE": 3159.82, "MAPE": 5.87}, "SARIMA": {"MAE": 2366.35, "RMSE": 2922.42, "MAPE": 5.52}, "Prophet": {"MAE": 2621.48, "RMSE": 3346.59, "MAPE": 5.95}, "XGBoost": {"MAE": 2399.2, "RMSE": 3093.62, "MAPE": 5.68}, "RandomForest": {"MAE": 2380.03, "RMSE": 3037.38, "MAPE": 5.67}}
+{
+  "Linear Regression": {
+    "MAE": 401.83,
+    "RMSE": 1879.16,
+    "MAPE": 9.28,
+    "R2 Score": -13.814
+  },
+  "Random Forest": {
+    "MAE": 16.72,
+    "RMSE": 21.5,
+    "MAPE": 0.42,
+    "R2 Score": 0.9981
+  },
+  "XGBoost": {
+    "MAE": 12.12,
+    "RMSE": 15.33,
+    "MAPE": 0.3,
+    "R2 Score": 0.999
+  },
+  "ARIMA": {
+    "MAE": 348.18,
+    "RMSE": 445.57,
+    "MAPE": 8.31,
+    "R2 Score": 0.1671
+  },
+  "SARIMA": {
+    "MAE": 109.46,
+    "RMSE": 139.24,
+    "MAPE": 2.76,
+    "R2 Score": 0.9187
+  },
+  "Prophet": {
+    "MAE": 490.9,
+    "RMSE": 511.85,
+    "MAPE": 12.27,
+    "R2 Score": -0.0991
+  }
+}
