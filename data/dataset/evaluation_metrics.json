@@ -1,0 +1,1 @@
+{"ARIMA": {"MAE": 2524.97, "RMSE": 3159.82, "MAPE": 5.87}, "SARIMA": {"MAE": 2366.35, "RMSE": 2922.42, "MAPE": 5.52}, "Prophet": {"MAE": 2621.48, "RMSE": 3346.59, "MAPE": 5.95}, "XGBoost": {"MAE": 2399.2, "RMSE": 3093.62, "MAPE": 5.68}, "RandomForest": {"MAE": 2380.03, "RMSE": 3037.38, "MAPE": 5.67}}

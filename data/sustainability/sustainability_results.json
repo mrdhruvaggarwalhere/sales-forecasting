@@ -1,0 +1,1948 @@
+{
+  "kpis": {
+    "co2_saved_kg": 5065.2,
+    "trips_reduced": 18,
+    "fuel_saved_litres": 1890.0,
+    "cost_saved": 9706.5,
+    "optimized_order_pct": 58.1,
+    "sustainability_score": 80,
+    "naive_trips": 31,
+    "optimized_trips": 13,
+    "products_analyzed": 5
+  },
+  "carbon_report": {
+    "naive": {
+      "trips": 31,
+      "distance_km": 9300.0,
+      "fuel_litres": 3255.0,
+      "co2_kg": 8723.4,
+      "total_cost": 16716.75
+    },
+    "optimized": {
+      "trips": 13,
+      "distance_km": 3900.0,
+      "fuel_litres": 1365.0,
+      "co2_kg": 3658.2,
+      "total_cost": 7010.25
+    },
+    "reduction_pct": 58.1
+  },
+  "consolidated_shipments": [
+    {
+      "day": 1,
+      "date": "2016-03-27",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "quantities": {
+        "FOODS_3_090": 2000,
+        "FOODS_3_586": 1642
+      },
+      "total_units": 3642,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 2,
+      "date": "2016-03-28",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_555",
+        "FOODS_3_714"
+      ],
+      "quantities": {
+        "FOODS_3_252": 1621,
+        "FOODS_3_555": 1623,
+        "FOODS_3_714": 1570
+      },
+      "total_units": 4814,
+      "products_consolidated": 3,
+      "trips_saved": 2
+    },
+    {
+      "day": 5,
+      "date": "2016-03-31",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "quantities": {
+        "FOODS_3_090": 1907,
+        "FOODS_3_586": 1584
+      },
+      "total_units": 3491,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 8,
+      "date": "2016-04-03",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_252"
+      ],
+      "quantities": {
+        "FOODS_3_090": 2000,
+        "FOODS_3_252": 1850
+      },
+      "total_units": 3850,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 9,
+      "date": "2016-04-04",
+      "products": [
+        "FOODS_3_555",
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "quantities": {
+        "FOODS_3_555": 1512,
+        "FOODS_3_586": 1705,
+        "FOODS_3_090": 1748
+      },
+      "total_units": 4965,
+      "products_consolidated": 3,
+      "trips_saved": 2
+    },
+    {
+      "day": 12,
+      "date": "2016-04-07",
+      "products": [
+        "FOODS_3_714",
+        "FOODS_3_586",
+        "FOODS_3_252"
+      ],
+      "quantities": {
+        "FOODS_3_714": 1554,
+        "FOODS_3_586": 1545,
+        "FOODS_3_252": 1776
+      },
+      "total_units": 4875,
+      "products_consolidated": 3,
+      "trips_saved": 2
+    },
+    {
+      "day": 15,
+      "date": "2016-04-10",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_555"
+      ],
+      "quantities": {
+        "FOODS_3_090": 2000,
+        "FOODS_3_555": 1530
+      },
+      "total_units": 3530,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 17,
+      "date": "2016-04-12",
+      "products": [
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "quantities": {
+        "FOODS_3_586": 1831,
+        "FOODS_3_090": 1785
+      },
+      "total_units": 3616,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 20,
+      "date": "2016-04-15",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_714",
+        "FOODS_3_586"
+      ],
+      "quantities": {
+        "FOODS_3_252": 1586,
+        "FOODS_3_714": 1583,
+        "FOODS_3_586": 1661
+      },
+      "total_units": 4830,
+      "products_consolidated": 3,
+      "trips_saved": 2
+    },
+    {
+      "day": 22,
+      "date": "2016-04-17",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_555"
+      ],
+      "quantities": {
+        "FOODS_3_090": 2000,
+        "FOODS_3_555": 1619
+      },
+      "total_units": 3619,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 25,
+      "date": "2016-04-20",
+      "products": [
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "quantities": {
+        "FOODS_3_586": 1609,
+        "FOODS_3_090": 1850
+      },
+      "total_units": 3459,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    },
+    {
+      "day": 26,
+      "date": "2016-04-21",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_714",
+        "FOODS_3_555"
+      ],
+      "quantities": {
+        "FOODS_3_252": 1694,
+        "FOODS_3_714": 1658,
+        "FOODS_3_555": 1637
+      },
+      "total_units": 4989,
+      "products_consolidated": 3,
+      "trips_saved": 2
+    },
+    {
+      "day": 29,
+      "date": "2016-04-24",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "quantities": {
+        "FOODS_3_090": 2000,
+        "FOODS_3_586": 1830
+      },
+      "total_units": 3830,
+      "products_consolidated": 2,
+      "trips_saved": 1
+    }
+  ],
+  "reorder_events": [
+    {
+      "product": "FOODS_3_090",
+      "day": 1,
+      "date": "2016-03-27",
+      "quantity_needed": 2000,
+      "current_inventory": 0,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 1,
+      "date": "2016-03-27",
+      "quantity_needed": 1642,
+      "current_inventory": 358,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_252",
+      "day": 2,
+      "date": "2016-03-28",
+      "quantity_needed": 1621,
+      "current_inventory": 379,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_555",
+      "day": 3,
+      "date": "2016-03-29",
+      "quantity_needed": 1623,
+      "current_inventory": 377,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_714",
+      "day": 4,
+      "date": "2016-03-30",
+      "quantity_needed": 1570,
+      "current_inventory": 430,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 5,
+      "date": "2016-03-31",
+      "quantity_needed": 1907,
+      "current_inventory": 93,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 5,
+      "date": "2016-03-31",
+      "quantity_needed": 1584,
+      "current_inventory": 416,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 8,
+      "date": "2016-04-03",
+      "quantity_needed": 2000,
+      "current_inventory": 0,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_252",
+      "day": 8,
+      "date": "2016-04-03",
+      "quantity_needed": 1850,
+      "current_inventory": 150,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_555",
+      "day": 9,
+      "date": "2016-04-04",
+      "quantity_needed": 1512,
+      "current_inventory": 488,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 9,
+      "date": "2016-04-04",
+      "quantity_needed": 1705,
+      "current_inventory": 295,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 12,
+      "date": "2016-04-07",
+      "quantity_needed": 1748,
+      "current_inventory": 252,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_714",
+      "day": 12,
+      "date": "2016-04-07",
+      "quantity_needed": 1554,
+      "current_inventory": 446,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 13,
+      "date": "2016-04-08",
+      "quantity_needed": 1545,
+      "current_inventory": 455,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_252",
+      "day": 14,
+      "date": "2016-04-09",
+      "quantity_needed": 1776,
+      "current_inventory": 224,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 15,
+      "date": "2016-04-10",
+      "quantity_needed": 2000,
+      "current_inventory": 0,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_555",
+      "day": 15,
+      "date": "2016-04-10",
+      "quantity_needed": 1530,
+      "current_inventory": 470,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 17,
+      "date": "2016-04-12",
+      "quantity_needed": 1831,
+      "current_inventory": 169,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 19,
+      "date": "2016-04-14",
+      "quantity_needed": 1785,
+      "current_inventory": 215,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_252",
+      "day": 20,
+      "date": "2016-04-15",
+      "quantity_needed": 1586,
+      "current_inventory": 414,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_714",
+      "day": 20,
+      "date": "2016-04-15",
+      "quantity_needed": 1583,
+      "current_inventory": 417,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 21,
+      "date": "2016-04-16",
+      "quantity_needed": 1661,
+      "current_inventory": 339,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 22,
+      "date": "2016-04-17",
+      "quantity_needed": 2000,
+      "current_inventory": 0,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_555",
+      "day": 22,
+      "date": "2016-04-17",
+      "quantity_needed": 1619,
+      "current_inventory": 381,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 25,
+      "date": "2016-04-20",
+      "quantity_needed": 1609,
+      "current_inventory": 391,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 26,
+      "date": "2016-04-21",
+      "quantity_needed": 1850,
+      "current_inventory": 150,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_252",
+      "day": 26,
+      "date": "2016-04-21",
+      "quantity_needed": 1694,
+      "current_inventory": 306,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_714",
+      "day": 28,
+      "date": "2016-04-23",
+      "quantity_needed": 1658,
+      "current_inventory": 342,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_090",
+      "day": 29,
+      "date": "2016-04-24",
+      "quantity_needed": 2000,
+      "current_inventory": 0,
+      "urgency": "critical"
+    },
+    {
+      "product": "FOODS_3_555",
+      "day": 29,
+      "date": "2016-04-24",
+      "quantity_needed": 1637,
+      "current_inventory": 363,
+      "urgency": "warning"
+    },
+    {
+      "product": "FOODS_3_586",
+      "day": 29,
+      "date": "2016-04-24",
+      "quantity_needed": 1830,
+      "current_inventory": 170,
+      "urgency": "critical"
+    }
+  ],
+  "inventory_timeline": {
+    "FOODS_3_090": [
+      {
+        "day": 0,
+        "date": "2016-03-26",
+        "inventory_level": 595,
+        "demand": 805,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 1,
+        "date": "2016-03-27",
+        "inventory_level": 2000,
+        "demand": 773,
+        "reorder_triggered": true,
+        "refill_amount": 2000
+      },
+      {
+        "day": 2,
+        "date": "2016-03-28",
+        "inventory_level": 1492,
+        "demand": 508,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 3,
+        "date": "2016-03-29",
+        "inventory_level": 1031,
+        "demand": 461,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 4,
+        "date": "2016-03-30",
+        "inventory_level": 570,
+        "demand": 461,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 5,
+        "date": "2016-03-31",
+        "inventory_level": 2000,
+        "demand": 477,
+        "reorder_triggered": true,
+        "refill_amount": 1907
+      },
+      {
+        "day": 6,
+        "date": "2016-04-01",
+        "inventory_level": 1295,
+        "demand": 705,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 7,
+        "date": "2016-04-02",
+        "inventory_level": 536,
+        "demand": 759,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 8,
+        "date": "2016-04-03",
+        "inventory_level": 2000,
+        "demand": 536,
+        "reorder_triggered": true,
+        "refill_amount": 2000
+      },
+      {
+        "day": 9,
+        "date": "2016-04-04",
+        "inventory_level": 1542,
+        "demand": 458,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 10,
+        "date": "2016-04-05",
+        "inventory_level": 1117,
+        "demand": 425,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 11,
+        "date": "2016-04-06",
+        "inventory_level": 681,
+        "demand": 436,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 12,
+        "date": "2016-04-07",
+        "inventory_level": 2000,
+        "demand": 429,
+        "reorder_triggered": true,
+        "refill_amount": 1748
+      },
+      {
+        "day": 13,
+        "date": "2016-04-08",
+        "inventory_level": 1349,
+        "demand": 651,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 14,
+        "date": "2016-04-09",
+        "inventory_level": 637,
+        "demand": 712,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 15,
+        "date": "2016-04-10",
+        "inventory_level": 2000,
+        "demand": 681,
+        "reorder_triggered": true,
+        "refill_amount": 2000
+      },
+      {
+        "day": 16,
+        "date": "2016-04-11",
+        "inventory_level": 1527,
+        "demand": 473,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 17,
+        "date": "2016-04-12",
+        "inventory_level": 1109,
+        "demand": 418,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 18,
+        "date": "2016-04-13",
+        "inventory_level": 652,
+        "demand": 457,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 19,
+        "date": "2016-04-14",
+        "inventory_level": 2000,
+        "demand": 437,
+        "reorder_triggered": true,
+        "refill_amount": 1785
+      },
+      {
+        "day": 20,
+        "date": "2016-04-15",
+        "inventory_level": 1359,
+        "demand": 641,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 21,
+        "date": "2016-04-16",
+        "inventory_level": 555,
+        "demand": 804,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 22,
+        "date": "2016-04-17",
+        "inventory_level": 2000,
+        "demand": 711,
+        "reorder_triggered": true,
+        "refill_amount": 2000
+      },
+      {
+        "day": 23,
+        "date": "2016-04-18",
+        "inventory_level": 1538,
+        "demand": 462,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 24,
+        "date": "2016-04-19",
+        "inventory_level": 1086,
+        "demand": 452,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 25,
+        "date": "2016-04-20",
+        "inventory_level": 622,
+        "demand": 464,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 26,
+        "date": "2016-04-21",
+        "inventory_level": 2000,
+        "demand": 472,
+        "reorder_triggered": true,
+        "refill_amount": 1850
+      },
+      {
+        "day": 27,
+        "date": "2016-04-22",
+        "inventory_level": 1341,
+        "demand": 659,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 28,
+        "date": "2016-04-23",
+        "inventory_level": 529,
+        "demand": 812,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 29,
+        "date": "2016-04-24",
+        "inventory_level": 2000,
+        "demand": 653,
+        "reorder_triggered": true,
+        "refill_amount": 2000
+      }
+    ],
+    "FOODS_3_586": [
+      {
+        "day": 0,
+        "date": "2016-03-26",
+        "inventory_level": 905,
+        "demand": 495,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 1,
+        "date": "2016-03-27",
+        "inventory_level": 2000,
+        "demand": 547,
+        "reorder_triggered": true,
+        "refill_amount": 1642
+      },
+      {
+        "day": 2,
+        "date": "2016-03-28",
+        "inventory_level": 1585,
+        "demand": 415,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 3,
+        "date": "2016-03-29",
+        "inventory_level": 1164,
+        "demand": 421,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 4,
+        "date": "2016-03-30",
+        "inventory_level": 795,
+        "demand": 369,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 5,
+        "date": "2016-03-31",
+        "inventory_level": 2000,
+        "demand": 379,
+        "reorder_triggered": true,
+        "refill_amount": 1584
+      },
+      {
+        "day": 6,
+        "date": "2016-04-01",
+        "inventory_level": 1587,
+        "demand": 413,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 7,
+        "date": "2016-04-02",
+        "inventory_level": 1102,
+        "demand": 485,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 8,
+        "date": "2016-04-03",
+        "inventory_level": 632,
+        "demand": 470,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 9,
+        "date": "2016-04-04",
+        "inventory_level": 2000,
+        "demand": 337,
+        "reorder_triggered": true,
+        "refill_amount": 1705
+      },
+      {
+        "day": 10,
+        "date": "2016-04-05",
+        "inventory_level": 1639,
+        "demand": 361,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 11,
+        "date": "2016-04-06",
+        "inventory_level": 1254,
+        "demand": 385,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 12,
+        "date": "2016-04-07",
+        "inventory_level": 877,
+        "demand": 377,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 13,
+        "date": "2016-04-08",
+        "inventory_level": 2000,
+        "demand": 422,
+        "reorder_triggered": true,
+        "refill_amount": 1545
+      },
+      {
+        "day": 14,
+        "date": "2016-04-09",
+        "inventory_level": 1445,
+        "demand": 555,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 15,
+        "date": "2016-04-10",
+        "inventory_level": 899,
+        "demand": 546,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 16,
+        "date": "2016-04-11",
+        "inventory_level": 532,
+        "demand": 367,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 17,
+        "date": "2016-04-12",
+        "inventory_level": 2000,
+        "demand": 363,
+        "reorder_triggered": true,
+        "refill_amount": 1831
+      },
+      {
+        "day": 18,
+        "date": "2016-04-13",
+        "inventory_level": 1642,
+        "demand": 358,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 19,
+        "date": "2016-04-14",
+        "inventory_level": 1259,
+        "demand": 383,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 20,
+        "date": "2016-04-15",
+        "inventory_level": 822,
+        "demand": 437,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 21,
+        "date": "2016-04-16",
+        "inventory_level": 2000,
+        "demand": 483,
+        "reorder_triggered": true,
+        "refill_amount": 1661
+      },
+      {
+        "day": 22,
+        "date": "2016-04-17",
+        "inventory_level": 1511,
+        "demand": 489,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 23,
+        "date": "2016-04-18",
+        "inventory_level": 1150,
+        "demand": 361,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 24,
+        "date": "2016-04-19",
+        "inventory_level": 766,
+        "demand": 384,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 25,
+        "date": "2016-04-20",
+        "inventory_level": 2000,
+        "demand": 375,
+        "reorder_triggered": true,
+        "refill_amount": 1609
+      },
+      {
+        "day": 26,
+        "date": "2016-04-21",
+        "inventory_level": 1616,
+        "demand": 384,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 27,
+        "date": "2016-04-22",
+        "inventory_level": 1204,
+        "demand": 412,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 28,
+        "date": "2016-04-23",
+        "inventory_level": 675,
+        "demand": 529,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 29,
+        "date": "2016-04-24",
+        "inventory_level": 2000,
+        "demand": 505,
+        "reorder_triggered": true,
+        "refill_amount": 1830
+      }
+    ],
+    "FOODS_3_252": [
+      {
+        "day": 0,
+        "date": "2016-03-26",
+        "inventory_level": 1015,
+        "demand": 385,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 1,
+        "date": "2016-03-27",
+        "inventory_level": 651,
+        "demand": 364,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 2,
+        "date": "2016-03-28",
+        "inventory_level": 2000,
+        "demand": 272,
+        "reorder_triggered": true,
+        "refill_amount": 1621
+      },
+      {
+        "day": 3,
+        "date": "2016-03-29",
+        "inventory_level": 1728,
+        "demand": 272,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 4,
+        "date": "2016-03-30",
+        "inventory_level": 1457,
+        "demand": 271,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 5,
+        "date": "2016-03-31",
+        "inventory_level": 1169,
+        "demand": 288,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 6,
+        "date": "2016-04-01",
+        "inventory_level": 897,
+        "demand": 272,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 7,
+        "date": "2016-04-02",
+        "inventory_level": 510,
+        "demand": 387,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 8,
+        "date": "2016-04-03",
+        "inventory_level": 2000,
+        "demand": 360,
+        "reorder_triggered": true,
+        "refill_amount": 1850
+      },
+      {
+        "day": 9,
+        "date": "2016-04-04",
+        "inventory_level": 1775,
+        "demand": 225,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 10,
+        "date": "2016-04-05",
+        "inventory_level": 1536,
+        "demand": 239,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 11,
+        "date": "2016-04-06",
+        "inventory_level": 1218,
+        "demand": 318,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 12,
+        "date": "2016-04-07",
+        "inventory_level": 947,
+        "demand": 271,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 13,
+        "date": "2016-04-08",
+        "inventory_level": 636,
+        "demand": 311,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 14,
+        "date": "2016-04-09",
+        "inventory_level": 2000,
+        "demand": 412,
+        "reorder_triggered": true,
+        "refill_amount": 1776
+      },
+      {
+        "day": 15,
+        "date": "2016-04-10",
+        "inventory_level": 1636,
+        "demand": 364,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 16,
+        "date": "2016-04-11",
+        "inventory_level": 1371,
+        "demand": 265,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 17,
+        "date": "2016-04-12",
+        "inventory_level": 1138,
+        "demand": 233,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 18,
+        "date": "2016-04-13",
+        "inventory_level": 915,
+        "demand": 223,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 19,
+        "date": "2016-04-14",
+        "inventory_level": 685,
+        "demand": 230,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 20,
+        "date": "2016-04-15",
+        "inventory_level": 2000,
+        "demand": 271,
+        "reorder_triggered": true,
+        "refill_amount": 1586
+      },
+      {
+        "day": 21,
+        "date": "2016-04-16",
+        "inventory_level": 1630,
+        "demand": 370,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 22,
+        "date": "2016-04-17",
+        "inventory_level": 1281,
+        "demand": 349,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 23,
+        "date": "2016-04-18",
+        "inventory_level": 1052,
+        "demand": 229,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 24,
+        "date": "2016-04-19",
+        "inventory_level": 818,
+        "demand": 234,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 25,
+        "date": "2016-04-20",
+        "inventory_level": 590,
+        "demand": 228,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 26,
+        "date": "2016-04-21",
+        "inventory_level": 2000,
+        "demand": 284,
+        "reorder_triggered": true,
+        "refill_amount": 1694
+      },
+      {
+        "day": 27,
+        "date": "2016-04-22",
+        "inventory_level": 1682,
+        "demand": 318,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 28,
+        "date": "2016-04-23",
+        "inventory_level": 1292,
+        "demand": 390,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 29,
+        "date": "2016-04-24",
+        "inventory_level": 937,
+        "demand": 355,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      }
+    ],
+    "FOODS_3_555": [
+      {
+        "day": 0,
+        "date": "2016-03-26",
+        "inventory_level": 1102,
+        "demand": 298,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 1,
+        "date": "2016-03-27",
+        "inventory_level": 831,
+        "demand": 271,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 2,
+        "date": "2016-03-28",
+        "inventory_level": 599,
+        "demand": 232,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 3,
+        "date": "2016-03-29",
+        "inventory_level": 2000,
+        "demand": 222,
+        "reorder_triggered": true,
+        "refill_amount": 1623
+      },
+      {
+        "day": 4,
+        "date": "2016-03-30",
+        "inventory_level": 1778,
+        "demand": 222,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 5,
+        "date": "2016-03-31",
+        "inventory_level": 1552,
+        "demand": 226,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 6,
+        "date": "2016-04-01",
+        "inventory_level": 1294,
+        "demand": 258,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 7,
+        "date": "2016-04-02",
+        "inventory_level": 972,
+        "demand": 322,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 8,
+        "date": "2016-04-03",
+        "inventory_level": 684,
+        "demand": 288,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 9,
+        "date": "2016-04-04",
+        "inventory_level": 2000,
+        "demand": 196,
+        "reorder_triggered": true,
+        "refill_amount": 1512
+      },
+      {
+        "day": 10,
+        "date": "2016-04-05",
+        "inventory_level": 1798,
+        "demand": 202,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 11,
+        "date": "2016-04-06",
+        "inventory_level": 1575,
+        "demand": 223,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 12,
+        "date": "2016-04-07",
+        "inventory_level": 1363,
+        "demand": 212,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 13,
+        "date": "2016-04-08",
+        "inventory_level": 1120,
+        "demand": 243,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 14,
+        "date": "2016-04-09",
+        "inventory_level": 788,
+        "demand": 332,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 15,
+        "date": "2016-04-10",
+        "inventory_level": 2000,
+        "demand": 318,
+        "reorder_triggered": true,
+        "refill_amount": 1530
+      },
+      {
+        "day": 16,
+        "date": "2016-04-11",
+        "inventory_level": 1767,
+        "demand": 233,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 17,
+        "date": "2016-04-12",
+        "inventory_level": 1571,
+        "demand": 196,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 18,
+        "date": "2016-04-13",
+        "inventory_level": 1374,
+        "demand": 197,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 19,
+        "date": "2016-04-14",
+        "inventory_level": 1173,
+        "demand": 201,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 20,
+        "date": "2016-04-15",
+        "inventory_level": 932,
+        "demand": 241,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 21,
+        "date": "2016-04-16",
+        "inventory_level": 640,
+        "demand": 292,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 22,
+        "date": "2016-04-17",
+        "inventory_level": 2000,
+        "demand": 259,
+        "reorder_triggered": true,
+        "refill_amount": 1619
+      },
+      {
+        "day": 23,
+        "date": "2016-04-18",
+        "inventory_level": 1803,
+        "demand": 197,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 24,
+        "date": "2016-04-19",
+        "inventory_level": 1613,
+        "demand": 190,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 25,
+        "date": "2016-04-20",
+        "inventory_level": 1416,
+        "demand": 197,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 26,
+        "date": "2016-04-21",
+        "inventory_level": 1208,
+        "demand": 208,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 27,
+        "date": "2016-04-22",
+        "inventory_level": 968,
+        "demand": 240,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 28,
+        "date": "2016-04-23",
+        "inventory_level": 654,
+        "demand": 314,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 29,
+        "date": "2016-04-24",
+        "inventory_level": 2000,
+        "demand": 291,
+        "reorder_triggered": true,
+        "refill_amount": 1637
+      }
+    ],
+    "FOODS_3_714": [
+      {
+        "day": 0,
+        "date": "2016-03-26",
+        "inventory_level": 1164,
+        "demand": 236,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 1,
+        "date": "2016-03-27",
+        "inventory_level": 925,
+        "demand": 239,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 2,
+        "date": "2016-03-28",
+        "inventory_level": 745,
+        "demand": 180,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 3,
+        "date": "2016-03-29",
+        "inventory_level": 584,
+        "demand": 161,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 4,
+        "date": "2016-03-30",
+        "inventory_level": 2000,
+        "demand": 154,
+        "reorder_triggered": true,
+        "refill_amount": 1570
+      },
+      {
+        "day": 5,
+        "date": "2016-03-31",
+        "inventory_level": 1823,
+        "demand": 177,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 6,
+        "date": "2016-04-01",
+        "inventory_level": 1625,
+        "demand": 198,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 7,
+        "date": "2016-04-02",
+        "inventory_level": 1404,
+        "demand": 221,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 8,
+        "date": "2016-04-03",
+        "inventory_level": 1169,
+        "demand": 235,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 9,
+        "date": "2016-04-04",
+        "inventory_level": 987,
+        "demand": 182,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 10,
+        "date": "2016-04-05",
+        "inventory_level": 812,
+        "demand": 175,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 11,
+        "date": "2016-04-06",
+        "inventory_level": 631,
+        "demand": 181,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 12,
+        "date": "2016-04-07",
+        "inventory_level": 2000,
+        "demand": 185,
+        "reorder_triggered": true,
+        "refill_amount": 1554
+      },
+      {
+        "day": 13,
+        "date": "2016-04-08",
+        "inventory_level": 1767,
+        "demand": 233,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 14,
+        "date": "2016-04-09",
+        "inventory_level": 1489,
+        "demand": 278,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 15,
+        "date": "2016-04-10",
+        "inventory_level": 1231,
+        "demand": 258,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 16,
+        "date": "2016-04-11",
+        "inventory_level": 1059,
+        "demand": 172,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 17,
+        "date": "2016-04-12",
+        "inventory_level": 913,
+        "demand": 146,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 18,
+        "date": "2016-04-13",
+        "inventory_level": 768,
+        "demand": 145,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 19,
+        "date": "2016-04-14",
+        "inventory_level": 613,
+        "demand": 155,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 20,
+        "date": "2016-04-15",
+        "inventory_level": 2000,
+        "demand": 196,
+        "reorder_triggered": true,
+        "refill_amount": 1583
+      },
+      {
+        "day": 21,
+        "date": "2016-04-16",
+        "inventory_level": 1735,
+        "demand": 265,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 22,
+        "date": "2016-04-17",
+        "inventory_level": 1513,
+        "demand": 222,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 23,
+        "date": "2016-04-18",
+        "inventory_level": 1335,
+        "demand": 178,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 24,
+        "date": "2016-04-19",
+        "inventory_level": 1159,
+        "demand": 176,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 25,
+        "date": "2016-04-20",
+        "inventory_level": 992,
+        "demand": 167,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 26,
+        "date": "2016-04-21",
+        "inventory_level": 814,
+        "demand": 178,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 27,
+        "date": "2016-04-22",
+        "inventory_level": 603,
+        "demand": 211,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      },
+      {
+        "day": 28,
+        "date": "2016-04-23",
+        "inventory_level": 2000,
+        "demand": 261,
+        "reorder_triggered": true,
+        "refill_amount": 1658
+      },
+      {
+        "day": 29,
+        "date": "2016-04-24",
+        "inventory_level": 1770,
+        "demand": 230,
+        "reorder_triggered": false,
+        "refill_amount": 0
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 2",
+      "message": "FOODS_3_090 and FOODS_3_586 are all expected to reach reorder levels within a 3-day window around 2016-03-27. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 3 Orders on Day 3",
+      "message": "FOODS_3_252 and FOODS_3_555 and FOODS_3_714 are all expected to reach reorder levels within a 3-day window around 2016-03-28. Consolidating into a single shipment will save 2 trip(s), reduce CO\u2082 emissions by 562.8 kg, and cut logistics costs by $1,078.",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_555",
+        "FOODS_3_714"
+      ],
+      "estimated_savings": "$1,078 saved, 562.8 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 6",
+      "message": "FOODS_3_090 and FOODS_3_586 are all expected to reach reorder levels within a 3-day window around 2016-03-31. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 9",
+      "message": "FOODS_3_090 and FOODS_3_252 are all expected to reach reorder levels within a 3-day window around 2016-04-03. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_252"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 3 Orders on Day 10",
+      "message": "FOODS_3_555 and FOODS_3_586 and FOODS_3_090 are all expected to reach reorder levels within a 3-day window around 2016-04-04. Consolidating into a single shipment will save 2 trip(s), reduce CO\u2082 emissions by 562.8 kg, and cut logistics costs by $1,078.",
+      "products": [
+        "FOODS_3_555",
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "estimated_savings": "$1,078 saved, 562.8 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 3 Orders on Day 13",
+      "message": "FOODS_3_714 and FOODS_3_586 and FOODS_3_252 are all expected to reach reorder levels within a 3-day window around 2016-04-07. Consolidating into a single shipment will save 2 trip(s), reduce CO\u2082 emissions by 562.8 kg, and cut logistics costs by $1,078.",
+      "products": [
+        "FOODS_3_714",
+        "FOODS_3_586",
+        "FOODS_3_252"
+      ],
+      "estimated_savings": "$1,078 saved, 562.8 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 16",
+      "message": "FOODS_3_090 and FOODS_3_555 are all expected to reach reorder levels within a 3-day window around 2016-04-10. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_555"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 18",
+      "message": "FOODS_3_586 and FOODS_3_090 are all expected to reach reorder levels within a 3-day window around 2016-04-12. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 3 Orders on Day 21",
+      "message": "FOODS_3_252 and FOODS_3_714 and FOODS_3_586 are all expected to reach reorder levels within a 3-day window around 2016-04-15. Consolidating into a single shipment will save 2 trip(s), reduce CO\u2082 emissions by 562.8 kg, and cut logistics costs by $1,078.",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_714",
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "$1,078 saved, 562.8 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 23",
+      "message": "FOODS_3_090 and FOODS_3_555 are all expected to reach reorder levels within a 3-day window around 2016-04-17. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_555"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 26",
+      "message": "FOODS_3_586 and FOODS_3_090 are all expected to reach reorder levels within a 3-day window around 2016-04-20. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_586",
+        "FOODS_3_090"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 3 Orders on Day 27",
+      "message": "FOODS_3_252 and FOODS_3_714 and FOODS_3_555 are all expected to reach reorder levels within a 3-day window around 2016-04-21. Consolidating into a single shipment will save 2 trip(s), reduce CO\u2082 emissions by 562.8 kg, and cut logistics costs by $1,078.",
+      "products": [
+        "FOODS_3_252",
+        "FOODS_3_714",
+        "FOODS_3_555"
+      ],
+      "estimated_savings": "$1,078 saved, 562.8 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "combine",
+      "priority": "high",
+      "title": "Combine 2 Orders on Day 30",
+      "message": "FOODS_3_090 and FOODS_3_586 are all expected to reach reorder levels within a 3-day window around 2016-04-24. Consolidating into a single shipment will save 1 trip(s), reduce CO\u2082 emissions by 281.4 kg, and cut logistics costs by $539.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "$539 saved, 281.4 kg CO\u2082 avoided",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "type": "advance",
+      "priority": "high",
+      "title": "Advance Orders for 3 Critical Products",
+      "message": "Products FOODS_3_090, FOODS_3_252, FOODS_3_586 hit critically low inventory levels (below 12% of capacity). Consider advancing future orders by 1-2 days to maintain safety stock and prevent stockouts while keeping shipments consolidated.",
+      "products": [
+        "FOODS_3_090",
+        "FOODS_3_252",
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "Reduced stockout risk + better consolidation windows",
+      "icon": "\u26a1"
+    },
+    {
+      "type": "reduce",
+      "priority": "low",
+      "title": "Optimize Inventory Capacity for FOODS_3_090",
+      "message": "FOODS_3_090 triggered 9 reorder events in the 30-day forecast period. This high frequency suggests either the inventory capacity (2000 units) is too low for demand, or demand is unusually spiky. Consider increasing storage capacity or implementing just-in-time ordering for this product.",
+      "products": [
+        "FOODS_3_090"
+      ],
+      "estimated_savings": "Smoother replenishment cycle, fewer emergency orders",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "type": "reduce",
+      "priority": "low",
+      "title": "Optimize Inventory Capacity for FOODS_3_586",
+      "message": "FOODS_3_586 triggered 8 reorder events in the 30-day forecast period. This high frequency suggests either the inventory capacity (2000 units) is too low for demand, or demand is unusually spiky. Consider increasing storage capacity or implementing just-in-time ordering for this product.",
+      "products": [
+        "FOODS_3_586"
+      ],
+      "estimated_savings": "Smoother replenishment cycle, fewer emergency orders",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "type": "reduce",
+      "priority": "low",
+      "title": "Optimize Inventory Capacity for FOODS_3_252",
+      "message": "FOODS_3_252 triggered 5 reorder events in the 30-day forecast period. This high frequency suggests either the inventory capacity (2000 units) is too low for demand, or demand is unusually spiky. Consider increasing storage capacity or implementing just-in-time ordering for this product.",
+      "products": [
+        "FOODS_3_252"
+      ],
+      "estimated_savings": "Smoother replenishment cycle, fewer emergency orders",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "type": "reduce",
+      "priority": "low",
+      "title": "Optimize Inventory Capacity for FOODS_3_555",
+      "message": "FOODS_3_555 triggered 5 reorder events in the 30-day forecast period. This high frequency suggests either the inventory capacity (2000 units) is too low for demand, or demand is unusually spiky. Consider increasing storage capacity or implementing just-in-time ordering for this product.",
+      "products": [
+        "FOODS_3_555"
+      ],
+      "estimated_savings": "Smoother replenishment cycle, fewer emergency orders",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "type": "reduce",
+      "priority": "low",
+      "title": "Optimize Inventory Capacity for FOODS_3_714",
+      "message": "FOODS_3_714 triggered 4 reorder events in the 30-day forecast period. This high frequency suggests either the inventory capacity (2000 units) is too low for demand, or demand is unusually spiky. Consider increasing storage capacity or implementing just-in-time ordering for this product.",
+      "products": [
+        "FOODS_3_714"
+      ],
+      "estimated_savings": "Smoother replenishment cycle, fewer emergency orders",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "type": "avoid_overstock",
+      "priority": "medium",
+      "title": "Environmental Impact Summary",
+      "message": "By consolidating shipments, you can reduce carbon emissions by 5065.2 kg CO\u2082 (58.1% reduction), save 1890.0 litres of fuel, and cut logistics costs by $9,706. This is equivalent to 87.3K trees absorbing CO\u2082 for one day.",
+      "products": [],
+      "estimated_savings": "5065.2 kg CO\u2082 reduced",
+      "icon": "\ud83c\udf31"
+    }
+  ],
+  "config": {
+    "reorder_threshold_pct": 0.25,
+    "max_delay_days": 3,
+    "max_inventory_capacity": 2000,
+    "shipping_cost_per_trip": 450.0,
+    "distance_km": 150.0,
+    "co2_emission_factor": 2.68,
+    "fuel_consumption_rate": 0.35
+  }
+}
